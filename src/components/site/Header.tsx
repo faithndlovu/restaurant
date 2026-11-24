@@ -36,8 +36,8 @@ export function Header() {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-background/85 backdrop-blur-xl border-b border-border shadow-[0_4px_30px_rgba(0,0,0,0.4)]"
-          : "bg-transparent"
+          ? "bg-background/95 backdrop-blur-xl border-b border-border shadow-[0_8px_24px_-14px_rgba(74,50,24,0.4)]"
+          : "bg-background/90 backdrop-blur-md border-b border-transparent"
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-3 md:px-8">
@@ -45,10 +45,10 @@ export function Header() {
           <img
             src={logo.url}
             alt="Savanna Grill logo"
-            className="h-12 w-12 rounded-full object-cover ring-1 ring-gold/40"
+            className="h-12 w-12 rounded-full object-cover ring-1 ring-clay/40"
           />
           <div className="flex flex-col leading-none">
-            <span className="font-display text-lg text-gold-gradient">Savanna</span>
+            <span className="font-display text-lg text-clay">Savanna</span>
             <span className="text-[10px] tracking-[0.3em] text-muted-foreground uppercase">
               Grill
             </span>
@@ -60,12 +60,12 @@ export function Header() {
             <Link
               key={n.to}
               to={n.to}
-              className="text-sm tracking-wide text-foreground/80 hover:text-gold transition-colors relative group"
-              activeProps={{ className: "text-gold" }}
+              className="text-sm tracking-wide text-foreground/80 hover:text-clay transition-colors relative group"
+              activeProps={{ className: "text-clay" }}
               activeOptions={{ exact: n.to === "/" }}
             >
               {n.label}
-              <span className="absolute -bottom-1 left-0 h-px w-0 bg-gold transition-all group-hover:w-full" />
+              <span className="absolute -bottom-1 left-0 h-px w-0 bg-clay transition-all group-hover:w-full" />
             </Link>
           ))}
         </nav>
@@ -74,7 +74,7 @@ export function Header() {
           {isAdmin && (
             <Link
               to="/admin"
-              className="text-xs tracking-wider uppercase text-gold hover:text-gold-bright inline-flex items-center gap-1.5"
+              className="text-xs tracking-wider uppercase text-clay hover:text-clay-deep inline-flex items-center gap-1.5"
             >
               <ShieldCheck size={14} /> Admin
             </Link>
@@ -82,7 +82,7 @@ export function Header() {
           {user ? (
             <button
               onClick={signOut}
-              className="text-xs text-muted-foreground hover:text-gold inline-flex items-center gap-1.5"
+              className="text-xs text-muted-foreground hover:text-clay inline-flex items-center gap-1.5"
               aria-label="Sign out"
             >
               <LogOut size={14} /> Sign out
@@ -90,14 +90,14 @@ export function Header() {
           ) : (
             <Link
               to="/auth"
-              className="text-xs text-muted-foreground hover:text-gold inline-flex items-center gap-1.5"
+              className="text-xs text-muted-foreground hover:text-clay inline-flex items-center gap-1.5"
             >
               <LogIn size={14} /> Sign in
             </Link>
           )}
           <Link
             to="/reservations"
-            className="btn-gold rounded-full px-5 py-2.5 text-sm font-medium"
+            className="btn-clay rounded-full px-5 py-2.5 text-sm font-medium"
           >
             Book a Table
           </Link>
@@ -105,7 +105,7 @@ export function Header() {
 
         <button
           aria-label="Toggle menu"
-          className="lg:hidden text-gold p-2"
+          className="lg:hidden text-clay p-2"
           onClick={() => setOpen((v) => !v)}
         >
           {open ? <X size={24} /> : <Menu size={24} />}
@@ -120,8 +120,8 @@ export function Header() {
                 key={n.to}
                 to={n.to}
                 onClick={() => setOpen(false)}
-                className="py-3 text-foreground/90 hover:text-gold border-b border-border/60"
-                activeProps={{ className: "text-gold" }}
+                className="py-3 text-foreground/90 hover:text-clay border-b border-border/60"
+                activeProps={{ className: "text-clay" }}
               >
                 {n.label}
               </Link>
@@ -130,7 +130,7 @@ export function Header() {
               <Link
                 to="/admin"
                 onClick={() => setOpen(false)}
-                className="py-3 text-gold border-b border-border/60 inline-flex items-center gap-2"
+                className="py-3 text-clay border-b border-border/60 inline-flex items-center gap-2"
               >
                 <ShieldCheck size={14} /> Admin Console
               </Link>
@@ -157,7 +157,7 @@ export function Header() {
             <Link
               to="/reservations"
               onClick={() => setOpen(false)}
-              className="btn-gold rounded-full px-5 py-3 text-center text-sm font-medium mt-3"
+              className="btn-clay rounded-full px-5 py-3 text-center text-sm font-medium mt-3"
             >
               Book a Table
             </Link>

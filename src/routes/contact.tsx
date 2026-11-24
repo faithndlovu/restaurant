@@ -72,7 +72,7 @@ function Contact() {
 
   return (
     <SiteLayout>
-      <section className="py-20 md:py-28 bg-charcoal border-b border-border">
+      <section className="py-20 md:py-28 bg-sand border-b border-border">
         <div className="mx-auto max-w-4xl px-6 text-center">
           <SectionHeading
             eyebrow="Say Hello"
@@ -97,9 +97,9 @@ function Contact() {
             ].map(({ icon: Icon, title, body }) => (
               <div
                 key={title}
-                className="rounded-xl border border-border bg-card p-6 flex gap-4 hover:border-gold/50 transition"
+                className="rounded-xl border border-border bg-card p-6 flex gap-4 hover:border-clay/50 transition"
               >
-                <div className="h-11 w-11 shrink-0 rounded-full bg-gold/10 grid place-items-center text-gold">
+                <div className="h-11 w-11 shrink-0 rounded-full bg-clay/10 grid place-items-center text-clay">
                   <Icon size={18} />
                 </div>
                 <div>
@@ -114,7 +114,7 @@ function Contact() {
                 aria-label="Instagram"
                 target="_blank"
                 rel="noreferrer"
-                className="h-11 w-11 grid place-items-center rounded-full border border-gold/40 text-gold hover:bg-gold hover:text-charcoal transition"
+                className="h-11 w-11 grid place-items-center rounded-full border border-clay/40 text-clay hover:bg-clay hover:text-primary-foreground transition"
               >
                 <Instagram size={16} />
               </a>
@@ -123,7 +123,7 @@ function Contact() {
                 aria-label="Facebook"
                 target="_blank"
                 rel="noreferrer"
-                className="h-11 w-11 grid place-items-center rounded-full border border-gold/40 text-gold hover:bg-gold hover:text-charcoal transition"
+                className="h-11 w-11 grid place-items-center rounded-full border border-clay/40 text-clay hover:bg-clay hover:text-primary-foreground transition"
               >
                 <Facebook size={16} />
               </a>
@@ -132,7 +132,7 @@ function Contact() {
                 aria-label="WhatsApp"
                 target="_blank"
                 rel="noreferrer"
-                className="h-11 w-11 grid place-items-center rounded-full border border-gold/40 text-gold hover:bg-gold hover:text-charcoal transition"
+                className="h-11 w-11 grid place-items-center rounded-full border border-clay/40 text-clay hover:bg-clay hover:text-primary-foreground transition"
               >
                 <MessageCircle size={16} />
               </a>
@@ -142,8 +142,8 @@ function Contact() {
           <div className="lg:col-span-2 rounded-xl border border-border bg-card p-8 md:p-10">
             {sent ? (
               <div className="text-center py-12 animate-fade-up">
-                <div className="mx-auto h-16 w-16 rounded-full bg-gold/15 grid place-items-center mb-5">
-                  <Check className="text-gold" size={32} />
+                <div className="mx-auto h-16 w-16 rounded-full bg-clay/15 grid place-items-center mb-5">
+                  <Check className="text-clay" size={32} />
                 </div>
                 <h3 className="font-display text-3xl">Message Sent</h3>
                 <p className="mt-3 text-muted-foreground">
@@ -156,7 +156,7 @@ function Contact() {
                     <>
                       Thanks for reaching out — we have your message and will respond within one
                       business day. In a hurry? Call us on{" "}
-                      <a href="tel:+263000000000" className="text-gold hover:underline">
+                      <a href="tel:+263000000000" className="text-clay hover:underline">
                         +263 00 000 0000
                       </a>
                       .
@@ -168,7 +168,7 @@ function Contact() {
                     setNotified(null);
                     setForm({ name: "", email: "", subject: "", message: "" });
                   }}
-                  className="mt-8 btn-outline-gold rounded-full px-6 py-2.5 text-sm"
+                  className="mt-8 btn-outline-clay rounded-full px-6 py-2.5 text-sm"
                 >
                   Send Another
                 </button>
@@ -222,7 +222,7 @@ function Contact() {
                   />
                 </label>
                 {error && (
-                  <div className="md:col-span-2 text-sm text-red-400 border border-red-500/30 bg-red-500/10 rounded-md p-3">
+                  <div className="md:col-span-2 text-sm text-red-700 border border-red-500/30 bg-red-500/10 rounded-md p-3">
                     {error}
                   </div>
                 )}
@@ -230,7 +230,7 @@ function Contact() {
                   <button
                     type="submit"
                     disabled={busy}
-                    className="btn-gold rounded-full px-8 py-3.5 text-sm font-semibold tracking-wide disabled:opacity-60"
+                    className="btn-clay rounded-full px-8 py-3.5 text-sm font-semibold tracking-wide disabled:opacity-60"
                   >
                     {busy ? "Sending…" : "Send Message"}
                   </button>
@@ -259,4 +259,4 @@ function Contact() {
 }
 
 const input =
-  "w-full bg-secondary rounded-md px-4 py-3 text-sm outline-none focus:ring-1 focus:ring-gold border border-transparent focus:border-gold/50 transition";
+  "w-full bg-secondary rounded-md px-4 py-3 text-sm outline-none focus:ring-1 focus:ring-clay border border-transparent focus:border-clay/50 transition";

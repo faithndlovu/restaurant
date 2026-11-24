@@ -109,13 +109,13 @@ function AdminAdmins() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="staff@example.com"
-            className="w-full bg-secondary rounded-md px-3 py-2.5 text-sm outline-none focus:ring-1 focus:ring-gold border border-transparent focus:border-gold/50"
+            className="w-full bg-secondary rounded-md px-3 py-2.5 text-sm outline-none focus:ring-1 focus:ring-clay border border-transparent focus:border-clay/50"
           />
         </label>
         <button
           type="submit"
           disabled={busy}
-          className="btn-gold rounded-full px-5 py-2.5 text-sm inline-flex items-center justify-center gap-2 disabled:opacity-60"
+          className="btn-clay rounded-full px-5 py-2.5 text-sm inline-flex items-center justify-center gap-2 disabled:opacity-60"
         >
           <UserPlus size={16} /> {busy ? "Adding…" : "Make admin"}
         </button>
@@ -125,7 +125,7 @@ function AdminAdmins() {
       </p>
 
       {error && (
-        <div className="rounded-md border border-red-500/30 bg-red-500/10 text-red-300 text-sm p-3">
+        <div className="rounded-md border border-red-500/30 bg-red-500/10 text-red-700 text-sm p-3">
           {error}
         </div>
       )}
@@ -137,7 +137,7 @@ function AdminAdmins() {
           {admins.map((a) => (
             <div key={a.user_id} className="flex items-center justify-between gap-4 p-4">
               <div className="flex items-center gap-3 min-w-0">
-                <ShieldCheck size={18} className="text-gold shrink-0" />
+                <ShieldCheck size={18} className="text-clay shrink-0" />
                 <div className="min-w-0">
                   <div className="font-medium truncate">
                     {a.display_name || a.email}
@@ -154,7 +154,7 @@ function AdminAdmins() {
                 onClick={() => revoke(a)}
                 disabled={admins.length <= 1}
                 title={admins.length <= 1 ? "You can't remove the last admin" : undefined}
-                className="rounded-full border border-border px-3 py-2 text-xs inline-flex items-center gap-1 hover:text-red-400 hover:border-red-400/60 disabled:opacity-40 disabled:pointer-events-none"
+                className="rounded-full border border-border px-3 py-2 text-xs inline-flex items-center gap-1 hover:text-red-700 hover:border-red-600/60 disabled:opacity-40 disabled:pointer-events-none"
               >
                 <UserMinus size={14} /> Remove
               </button>

@@ -92,7 +92,7 @@ function AuthPage() {
       <section className="min-h-[80vh] grid place-items-center py-24 px-6">
         <div className="w-full max-w-md rounded-xl border border-border bg-card p-8 md:p-10">
           <div className="text-center mb-8">
-            <div className="font-display text-3xl text-gold-gradient">Savanna Grill</div>
+            <div className="font-display text-3xl text-clay">Savanna Grill</div>
             <p className="mt-2 text-sm text-muted-foreground">
               {mode === "signin" ? "Welcome back" : "Create your account"}
             </p>
@@ -102,7 +102,7 @@ function AuthPage() {
               turn Google sign-in back on.
           <button
             onClick={onGoogle}
-            className="w-full rounded-full border border-border bg-secondary hover:border-gold/50 transition px-5 py-3 text-sm font-medium flex items-center justify-center gap-3"
+            className="w-full rounded-full border border-border bg-secondary hover:border-clay/50 transition px-5 py-3 text-sm font-medium flex items-center justify-center gap-3"
           >
             <svg width="18" height="18" viewBox="0 0 48 48">
               <path
@@ -138,7 +138,7 @@ function AuthPage() {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 required
-                className="w-full bg-secondary rounded-md px-4 py-3 text-sm outline-none focus:ring-1 focus:ring-gold border border-transparent focus:border-gold/50"
+                className="w-full bg-secondary rounded-md px-4 py-3 text-sm outline-none focus:ring-1 focus:ring-clay border border-transparent focus:border-clay/50"
               />
             )}
             <input
@@ -147,7 +147,7 @@ function AuthPage() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              className="w-full bg-secondary rounded-md px-4 py-3 text-sm outline-none focus:ring-1 focus:ring-gold border border-transparent focus:border-gold/50"
+              className="w-full bg-secondary rounded-md px-4 py-3 text-sm outline-none focus:ring-1 focus:ring-clay border border-transparent focus:border-clay/50"
             />
             <input
               type="password"
@@ -156,14 +156,14 @@ function AuthPage() {
               onChange={(e) => setPassword(e.target.value)}
               required
               minLength={6}
-              className="w-full bg-secondary rounded-md px-4 py-3 text-sm outline-none focus:ring-1 focus:ring-gold border border-transparent focus:border-gold/50"
+              className="w-full bg-secondary rounded-md px-4 py-3 text-sm outline-none focus:ring-1 focus:ring-clay border border-transparent focus:border-clay/50"
             />
-            {error && <p className="text-sm text-red-400">{error}</p>}
-            {notice && <p className="text-sm text-gold">{notice}</p>}
+            {error && <p className="text-sm text-red-700">{error}</p>}
+            {notice && <p className="text-sm text-clay">{notice}</p>}
             <button
               type="submit"
               disabled={busy}
-              className="btn-gold w-full rounded-full py-3 text-sm font-semibold tracking-wide disabled:opacity-60"
+              className="btn-clay w-full rounded-full py-3 text-sm font-semibold tracking-wide disabled:opacity-60"
             >
               {busy ? "Please wait…" : mode === "signin" ? "Sign In" : "Create Account"}
             </button>
@@ -174,13 +174,13 @@ function AuthPage() {
             <button
               type="button"
               onClick={() => setMode(mode === "signin" ? "signup" : "signin")}
-              className="text-gold hover:underline"
+              className="text-clay hover:underline"
             >
               {mode === "signin" ? "Create an account" : "Sign in"}
             </button>
           </p>
           <p className="mt-3 text-center text-xs text-muted-foreground">
-            <Link to="/" className="hover:text-gold">
+            <Link to="/" className="hover:text-clay">
               ← Back to site
             </Link>
           </p>

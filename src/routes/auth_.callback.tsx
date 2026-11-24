@@ -71,16 +71,16 @@ function AuthCallbackPage() {
     <SiteLayout>
       <section className="min-h-[80vh] grid place-items-center py-24 px-6">
         <div className="w-full max-w-md rounded-xl border border-border bg-card p-8 md:p-10 text-center">
-          <div className="font-display text-3xl text-gold-gradient">Savanna Grill</div>
+          <div className="font-display text-3xl text-clay">Savanna Grill</div>
           {error ? (
             <>
-              <p className="mt-4 text-sm text-red-400">{error}</p>
+              <p className="mt-4 text-sm text-red-700">{error}</p>
               <p className="mt-2 text-sm text-muted-foreground">
                 Request a new link, or sign in with your password.
               </p>
               <Link
                 to="/auth"
-                className="btn-gold mt-6 inline-flex rounded-full px-6 py-2.5 text-sm font-medium"
+                className="btn-clay mt-6 inline-flex rounded-full px-6 py-2.5 text-sm font-medium"
               >
                 Back to sign in
               </Link>

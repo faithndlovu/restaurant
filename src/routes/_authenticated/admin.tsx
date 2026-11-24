@@ -29,7 +29,7 @@ function AdminLayout() {
       <SiteLayout>
         <section className="py-32">
           <div className="mx-auto max-w-lg px-6 text-center">
-            <ShieldCheck className="mx-auto text-gold/60" size={40} />
+            <ShieldCheck className="mx-auto text-clay/60" size={40} />
             <h1 className="mt-6 font-display text-3xl">Admin access required</h1>
             <p className="mt-3 text-muted-foreground leading-relaxed">
               You're signed in, but this account doesn't have admin rights. Ask an existing admin to
@@ -37,7 +37,7 @@ function AdminLayout() {
             </p>
             <Link
               to="/"
-              className="mt-8 inline-block btn-outline-gold rounded-full px-6 py-2.5 text-sm"
+              className="mt-8 inline-block btn-outline-clay rounded-full px-6 py-2.5 text-sm"
             >
               Back to the site
             </Link>
@@ -49,11 +49,11 @@ function AdminLayout() {
 
   return (
     <SiteLayout>
-      <section className="py-24 md:py-28 bg-charcoal border-b border-border">
+      <section className="py-24 md:py-28 bg-sand border-b border-border">
         <div className="mx-auto max-w-7xl px-6 md:px-8">
           <div className="flex items-center gap-3 mb-3">
-            <ShieldCheck className="text-gold" size={20} />
-            <span className="text-xs tracking-[0.35em] uppercase text-gold">Admin</span>
+            <ShieldCheck className="text-clay" size={20} />
+            <span className="text-xs tracking-[0.35em] uppercase text-clay">Admin</span>
           </div>
           <h1 className="font-display text-4xl md:text-5xl">Restaurant Console</h1>
           <p className="mt-3 text-muted-foreground">Manage your menu and incoming reservations.</p>
@@ -100,8 +100,8 @@ function AdminTab({
       to={to}
       // Without exact, the Dashboard tab (/admin) would stay highlighted on every sub-page.
       activeOptions={{ exact }}
-      className="px-5 py-2 rounded-full text-sm border border-border text-muted-foreground hover:text-gold hover:border-gold/60 transition inline-flex items-center gap-2"
-      activeProps={{ className: "bg-gold text-charcoal border-gold hover:text-charcoal" }}
+      className="px-5 py-2 rounded-full text-sm border border-border text-muted-foreground hover:text-clay hover:border-clay/60 transition inline-flex items-center gap-2"
+      activeProps={{ className: "bg-clay text-primary-foreground border-clay hover:text-primary-foreground" }}
     >
       {icon} {label}
     </Link>

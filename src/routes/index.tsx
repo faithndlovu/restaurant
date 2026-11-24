@@ -74,27 +74,27 @@ function Home() {
   return (
     <SiteLayout>
       {/* HERO */}
-      <section className="relative -mt-20 min-h-[100vh] flex items-center overflow-hidden">
+      <section className="on-dark relative -mt-20 min-h-[100vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <img
             src={hero.url}
             alt="Signature mixed grill at Savanna Grill"
             className="h-full w-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-charcoal/85 via-charcoal/60 to-charcoal" />
-          <div className="absolute inset-0 bg-gradient-to-r from-charcoal via-charcoal/40 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-b from-bark/65 via-bark/35 to-bark/85" />
+          <div className="absolute inset-0 bg-gradient-to-r from-bark/85 via-bark/30 to-transparent" />
         </div>
         <div className="relative z-10 mx-auto max-w-7xl px-6 md:px-8 pt-32 pb-20 w-full">
           <div className="max-w-3xl animate-fade-up">
             <div className="flex items-center gap-3 mb-6">
-              <span className="h-px w-12 bg-gold" />
-              <span className="text-xs tracking-[0.4em] uppercase text-gold">
+              <span className="h-px w-12 bg-clay" />
+              <span className="text-xs tracking-[0.4em] uppercase text-clay">
                 Est. 2024 · Bulawayo
               </span>
             </div>
             <h1 className="font-display text-5xl md:text-7xl lg:text-8xl leading-[1.05] text-foreground">
               Experience{" "}
-              <span className="font-script text-gold-gradient font-normal">Exceptional</span>
+              <span className="italic font-normal text-clay">Exceptional</span>
               <br />
               Dining at Savanna Grill
             </h1>
@@ -105,27 +105,27 @@ function Home() {
             <div className="mt-10 flex flex-wrap gap-4">
               <Link
                 to="/reservations"
-                className="btn-gold rounded-full px-8 py-3.5 text-sm font-semibold tracking-wide inline-flex items-center gap-2"
+                className="btn-clay rounded-full px-8 py-3.5 text-sm font-semibold tracking-wide inline-flex items-center gap-2"
               >
                 Book a Table <ArrowRight size={16} />
               </Link>
               <Link
                 to="/menu"
-                className="btn-outline-gold rounded-full px-8 py-3.5 text-sm font-semibold tracking-wide"
+                className="btn-outline-clay rounded-full px-8 py-3.5 text-sm font-semibold tracking-wide"
               >
                 View Menu
               </Link>
             </div>
           </div>
         </div>
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 text-gold/80">
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 text-clay/80">
           <span className="text-[10px] tracking-[0.3em] uppercase">Scroll</span>
-          <span className="h-10 w-px bg-gold/60" />
+          <span className="h-10 w-px bg-clay/60" />
         </div>
       </section>
 
       {/* HIGHLIGHTS / STATS */}
-      <section className="border-y border-border bg-charcoal/40">
+      <section className="border-y border-border bg-sand/60">
         <div className="mx-auto max-w-7xl grid grid-cols-2 md:grid-cols-4 px-6 md:px-8">
           {/* Every figure here is checkable against a public source. The strip
               used to read "60+ Signature Dishes / 10k+ Plates Served / 4.6 Guest
@@ -141,7 +141,7 @@ function Home() {
               key={label}
               className="py-10 text-center border-r last:border-r-0 border-border/40"
             >
-              <Icon className="mx-auto mb-3 text-gold" size={28} />
+              <Icon className="mx-auto mb-3 text-clay" size={28} />
               <div className="font-display text-3xl md:text-4xl text-foreground">{value}</div>
               <div className="text-xs tracking-[0.25em] uppercase text-muted-foreground mt-1">
                 {label}
@@ -156,11 +156,11 @@ function Home() {
         <div className="mx-auto max-w-7xl px-6 md:px-8 grid md:grid-cols-2 gap-16 items-center">
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <span className="h-px w-8 bg-gold" />
-              <span className="text-xs tracking-[0.35em] uppercase text-gold">Our Philosophy</span>
+              <span className="h-px w-8 bg-clay" />
+              <span className="text-xs tracking-[0.35em] uppercase text-clay">Our Philosophy</span>
             </div>
             <h2 className="font-display text-4xl md:text-5xl leading-tight">
-              Where local tradition meets <span className="text-gold-gradient">modern dining</span>.
+              Where local tradition meets <span className="text-clay">modern dining</span>.
             </h2>
             <p className="mt-6 text-muted-foreground text-lg leading-relaxed">
               Savanna Grill is a delightful spot in Bulawayo offering a variety of well-prepared
@@ -174,7 +174,7 @@ function Home() {
             </p>
             <Link
               to="/about"
-              className="mt-8 inline-flex items-center gap-2 text-gold hover:gap-3 transition-all"
+              className="mt-8 inline-flex items-center gap-2 text-clay hover:gap-3 transition-all"
             >
               Our Story <ArrowRight size={16} />
             </Link>
@@ -197,7 +197,7 @@ function Home() {
       </section>
 
       {/* FEATURED DISHES */}
-      <section className="py-24 bg-gradient-to-b from-background to-charcoal">
+      <section className="py-24 bg-gradient-to-b from-background to-sand">
         <div className="mx-auto max-w-7xl px-6 md:px-8">
           <SectionHeading
             eyebrow="Featured"
@@ -208,7 +208,7 @@ function Home() {
             {featured.map((item) => (
               <article
                 key={item.id}
-                className="group relative overflow-hidden rounded-xl bg-card border border-border hover:border-gold/50 transition-all duration-500"
+                className="group relative overflow-hidden rounded-xl bg-card border border-border hover:border-clay/50 transition-all duration-500"
               >
                 <div className="aspect-[4/5] overflow-hidden">
                   <img
@@ -217,16 +217,16 @@ function Home() {
                     className="h-full w-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/40 to-transparent opacity-90" />
-                <div className="absolute inset-x-0 bottom-0 p-5">
+                <div className="absolute inset-0 bg-gradient-to-t from-bark via-bark/40 to-transparent opacity-90" />
+                <div className="on-dark absolute inset-x-0 bottom-0 p-5">
                   {item.tag && (
-                    <span className="inline-block text-[10px] tracking-[0.25em] uppercase text-gold mb-2">
+                    <span className="inline-block text-[10px] tracking-[0.25em] uppercase text-clay mb-2">
                       {item.tag}
                     </span>
                   )}
                   <h3 className="font-display text-xl text-foreground">{item.name}</h3>
                   <div className="mt-2 flex items-center justify-between">
-                    <span className="text-gold text-lg font-medium">${item.price.toFixed(2)}</span>
+                    <span className="text-clay text-lg font-medium">${item.price.toFixed(2)}</span>
                     <span className="text-xs text-muted-foreground">View →</span>
                   </div>
                 </div>
@@ -236,7 +236,7 @@ function Home() {
           <div className="text-center mt-12">
             <Link
               to="/menu"
-              className="btn-outline-gold rounded-full px-8 py-3 text-sm font-medium inline-flex items-center gap-2"
+              className="btn-outline-clay rounded-full px-8 py-3 text-sm font-medium inline-flex items-center gap-2"
             >
               Full Menu <ArrowRight size={16} />
             </Link>
@@ -275,9 +275,9 @@ function Home() {
             ].map(({ icon: Icon, title, body }) => (
               <div
                 key={title}
-                className="rounded-xl border border-border bg-card p-8 hover:border-gold/50 transition"
+                className="rounded-xl border border-border bg-card p-8 hover:border-clay/50 transition"
               >
-                <div className="h-11 w-11 rounded-full bg-gold/10 grid place-items-center text-gold">
+                <div className="h-11 w-11 rounded-full bg-clay/10 grid place-items-center text-clay">
                   <Icon size={18} />
                 </div>
                 <h3 className="mt-5 font-display text-xl">{title}</h3>
@@ -288,7 +288,7 @@ function Home() {
           <div className="text-center mt-12">
             <a
               href="/reservations"
-              className="btn-outline-gold rounded-full px-8 py-3 text-sm font-medium inline-flex items-center gap-2"
+              className="btn-outline-clay rounded-full px-8 py-3 text-sm font-medium inline-flex items-center gap-2"
             >
               Book a Table <ArrowRight size={16} />
             </a>
@@ -297,7 +297,7 @@ function Home() {
       </section>
 
       {/* GALLERY PREVIEW */}
-      <section className="py-24 bg-charcoal">
+      <section className="py-24 bg-sand">
         <div className="mx-auto max-w-7xl px-6 md:px-8">
           <SectionHeading eyebrow="Gallery" title="A Taste of the Experience" />
           <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-3">
@@ -318,7 +318,7 @@ function Home() {
           <div className="text-center mt-10">
             <Link
               to="/gallery"
-              className="text-gold hover:text-gold-bright inline-flex items-center gap-2"
+              className="text-clay hover:text-clay-deep inline-flex items-center gap-2"
             >
               View full gallery <ArrowRight size={16} />
             </Link>
@@ -327,15 +327,15 @@ function Home() {
       </section>
 
       {/* CTA */}
-      <section className="relative py-32 overflow-hidden">
+      <section className="on-dark bg-bark relative py-32 overflow-hidden">
         <div className="absolute inset-0">
           <img src={img4.url} alt="" className="h-full w-full object-cover opacity-25" />
-          <div className="absolute inset-0 bg-gradient-to-r from-charcoal via-charcoal/85 to-charcoal" />
+          <div className="absolute inset-0 bg-gradient-to-r from-bark via-bark/85 to-bark" />
         </div>
         <div className="relative mx-auto max-w-3xl text-center px-6">
-          <Wine className="mx-auto text-gold mb-6" size={36} />
+          <Wine className="mx-auto text-clay mb-6" size={36} />
           <h2 className="font-display text-4xl md:text-6xl">
-            Reserve Your <span className="text-gold-gradient">Table</span>
+            Reserve Your <span className="text-clay">Table</span>
           </h2>
           <p className="mt-5 text-muted-foreground text-lg">
             Whether it's a quiet dinner for two or a celebration for the whole family, we'd be
@@ -343,7 +343,7 @@ function Home() {
           </p>
           <Link
             to="/reservations"
-            className="mt-8 inline-flex btn-gold rounded-full px-10 py-3.5 text-sm font-semibold tracking-wide"
+            className="mt-8 inline-flex btn-clay rounded-full px-10 py-3.5 text-sm font-semibold tracking-wide"
           >
             Book Your Experience
           </Link>

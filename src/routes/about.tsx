@@ -27,15 +27,15 @@ export const Route = createFileRoute("/about")({
 function About() {
   return (
     <SiteLayout>
-      <section className="relative py-24 md:py-32 bg-charcoal border-b border-border">
+      <section className="relative py-24 md:py-32 bg-sand border-b border-border">
         <div className="mx-auto max-w-4xl px-6 text-center">
           <div className="flex items-center gap-3 mb-5 justify-center">
-            <span className="h-px w-10 bg-gold" />
-            <span className="text-xs tracking-[0.4em] uppercase text-gold">Our Story</span>
-            <span className="h-px w-10 bg-gold" />
+            <span className="h-px w-10 bg-clay" />
+            <span className="text-xs tracking-[0.4em] uppercase text-clay">Our Story</span>
+            <span className="h-px w-10 bg-clay" />
           </div>
           <h1 className="font-display text-5xl md:text-7xl">
-            Crafted with <span className="font-script text-gold-gradient font-normal">passion</span>
+            Crafted with <span className="italic font-normal text-clay">passion</span>
             ,<br /> served with pride.
           </h1>
           <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
@@ -72,7 +72,7 @@ function About() {
         </div>
       </section>
 
-      <section className="py-20 bg-charcoal">
+      <section className="py-20 bg-sand">
         <div className="mx-auto max-w-7xl px-6 md:px-8 grid md:grid-cols-2 gap-10">
           {[
             {
@@ -87,7 +87,7 @@ function About() {
             },
           ].map(({ icon: Icon, title, body }) => (
             <div key={title} className="rounded-xl border border-border bg-card p-10">
-              <Icon className="text-gold mb-4" size={28} />
+              <Icon className="text-clay mb-4" size={28} />
               <h3 className="font-display text-2xl mb-3">{title}</h3>
               <p className="text-muted-foreground leading-relaxed">{body}</p>
             </div>
@@ -120,7 +120,7 @@ function About() {
         </div>
       </section>
 
-      <section className="py-20 bg-charcoal border-y border-border">
+      <section className="py-20 bg-sand border-y border-border">
         <div className="mx-auto max-w-7xl px-6 md:px-8">
           <SectionHeading eyebrow="What we stand for" title="Our Values" />
           <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -148,9 +148,9 @@ function About() {
             ].map(({ icon: Icon, t, d }) => (
               <div
                 key={t}
-                className="rounded-xl bg-background border border-border p-6 hover:border-gold/50 transition"
+                className="rounded-xl bg-background border border-border p-6 hover:border-clay/50 transition"
               >
-                <Icon className="text-gold mb-3" size={22} />
+                <Icon className="text-clay mb-3" size={22} />
                 <h4 className="font-display text-lg">{t}</h4>
                 <p className="text-sm text-muted-foreground mt-2 leading-relaxed">{d}</p>
               </div>

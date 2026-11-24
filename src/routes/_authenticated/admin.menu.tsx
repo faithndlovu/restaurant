@@ -164,14 +164,14 @@ function AdminMenu() {
         </div>
         <button
           onClick={startNew}
-          className="btn-gold rounded-full px-5 py-2.5 text-sm inline-flex items-center gap-2"
+          className="btn-clay rounded-full px-5 py-2.5 text-sm inline-flex items-center gap-2"
         >
           <Plus size={16} /> Add Item
         </button>
       </div>
 
       {error && (
-        <div className="rounded-md border border-red-500/30 bg-red-500/10 text-red-300 text-sm p-3">
+        <div className="rounded-md border border-red-500/30 bg-red-500/10 text-red-700 text-sm p-3">
           {error}
         </div>
       )}
@@ -214,11 +214,11 @@ function AdminMenu() {
                   </div>
                 </td>
                 <td className="p-4 hidden md:table-cell">{item.category}</td>
-                <td className="p-4 text-gold">${item.price.toFixed(2)}</td>
+                <td className="p-4 text-clay">${item.price.toFixed(2)}</td>
                 <td className="p-4 hidden lg:table-cell">
                   <button
                     onClick={() => toggleAvailable(item)}
-                    className={`text-xs px-2 py-1 rounded-full ${item.is_available ? "bg-emerald-500/15 text-emerald-300" : "bg-muted text-muted-foreground"}`}
+                    className={`text-xs px-2 py-1 rounded-full ${item.is_available ? "bg-emerald-500/15 text-emerald-800" : "bg-muted text-muted-foreground"}`}
                   >
                     {item.is_available ? "Available" : "Hidden"}
                   </button>
@@ -226,14 +226,14 @@ function AdminMenu() {
                 <td className="p-4 text-right">
                   <button
                     onClick={() => startEdit(item)}
-                    className="p-2 hover:text-gold"
+                    className="p-2 hover:text-clay"
                     aria-label="Edit"
                   >
                     <Pencil size={16} />
                   </button>
                   <button
                     onClick={() => remove(item.id)}
-                    className="p-2 hover:text-red-400"
+                    className="p-2 hover:text-red-700"
                     aria-label="Delete"
                   >
                     <Trash2 size={16} />
@@ -290,9 +290,9 @@ function DraftForm({
     }
   }
   const input =
-    "w-full bg-secondary rounded-md px-3 py-2.5 text-sm outline-none focus:ring-1 focus:ring-gold border border-transparent focus:border-gold/50";
+    "w-full bg-secondary rounded-md px-3 py-2.5 text-sm outline-none focus:ring-1 focus:ring-clay border border-transparent focus:border-clay/50";
   return (
-    <div className="rounded-xl border border-gold/40 bg-card p-6 space-y-4">
+    <div className="rounded-xl border border-clay/40 bg-card p-6 space-y-4">
       <div className="flex justify-between items-center">
         <h3 className="font-display text-xl">{isNew ? "New menu item" : "Edit item"}</h3>
         <button onClick={onCancel} className="text-muted-foreground hover:text-foreground">
@@ -372,7 +372,7 @@ function DraftForm({
             </div>
             <div className="flex-1 space-y-2">
               <label
-                className={`inline-flex items-center gap-2 rounded-full border border-border px-4 py-2 text-sm cursor-pointer hover:border-gold/60 hover:text-gold ${uploading ? "opacity-60 pointer-events-none" : ""}`}
+                className={`inline-flex items-center gap-2 rounded-full border border-border px-4 py-2 text-sm cursor-pointer hover:border-clay/60 hover:text-clay ${uploading ? "opacity-60 pointer-events-none" : ""}`}
               >
                 {uploading ? <Loader2 size={14} className="animate-spin" /> : <Upload size={14} />}
                 {uploading ? "Uploading…" : draft.image_url ? "Replace photo" : "Upload photo"}
@@ -385,7 +385,7 @@ function DraftForm({
                 />
               </label>
               <p className="text-xs text-muted-foreground">JPG, PNG or WebP, up to 5 MB.</p>
-              {uploadError && <p className="text-xs text-red-400">{uploadError}</p>}
+              {uploadError && <p className="text-xs text-red-700">{uploadError}</p>}
               <input
                 className={input}
                 value={draft.image_url ?? ""}
@@ -411,7 +411,7 @@ function DraftForm({
             type="checkbox"
             checked={draft.is_available}
             onChange={(e) => set("is_available", e.target.checked)}
-            className="accent-[#d4af37]"
+            className="accent-[#a8461f]"
           />
           <span className="text-sm">Available to customers</span>
         </label>
@@ -423,7 +423,7 @@ function DraftForm({
         <button
           onClick={onSave}
           disabled={uploading}
-          className="btn-gold rounded-full px-5 py-2 text-sm inline-flex items-center gap-2 disabled:opacity-60"
+          className="btn-clay rounded-full px-5 py-2 text-sm inline-flex items-center gap-2 disabled:opacity-60"
         >
           <Save size={14} /> Save
         </button>

@@ -60,7 +60,7 @@ function Gallery() {
 
   return (
     <SiteLayout>
-      <section className="py-20 md:py-28 bg-charcoal border-b border-border">
+      <section className="py-20 md:py-28 bg-sand border-b border-border">
         <div className="mx-auto max-w-4xl px-6 text-center">
           <SectionHeading
             eyebrow="Gallery"
@@ -84,7 +84,7 @@ function Gallery() {
                   alt={img.alt}
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-charcoal/0 group-hover:bg-charcoal/30 transition-colors" />
+                <div className="absolute inset-0 bg-bark/0 group-hover:bg-bark/30 transition-colors" />
               </button>
             ))}
           </div>
@@ -94,9 +94,9 @@ function Gallery() {
       {open && (
         <div
           onClick={() => setOpen(null)}
-          className="fixed inset-0 z-[100] bg-charcoal/95 backdrop-blur-sm flex items-center justify-center p-6 animate-fade-up"
+          className="on-dark fixed inset-0 z-[100] bg-bark/95 backdrop-blur-sm flex items-center justify-center p-6 animate-fade-up"
         >
-          <button className="absolute top-6 right-6 text-gold p-2" aria-label="Close">
+          <button className="absolute top-6 right-6 text-clay p-2" aria-label="Close">
             <X size={28} />
           </button>
           <img src={open} alt="" className="max-h-[90vh] max-w-full rounded-lg shadow-2xl" />

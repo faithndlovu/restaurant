@@ -17,7 +17,7 @@ function NotFoundComponent() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
-        <h1 className="font-display text-7xl text-gold-gradient">404</h1>
+        <h1 className="font-display text-7xl text-clay">404</h1>
         <h2 className="mt-4 text-xl font-semibold text-foreground">Page not found</h2>
         <p className="mt-2 text-sm text-muted-foreground">
           The page you're looking for doesn't exist or has been moved.
@@ -25,7 +25,7 @@ function NotFoundComponent() {
         <div className="mt-6">
           <Link
             to="/"
-            className="btn-gold inline-flex rounded-full px-6 py-2.5 text-sm font-medium"
+            className="btn-clay inline-flex rounded-full px-6 py-2.5 text-sm font-medium"
           >
             Back home
           </Link>
@@ -50,11 +50,11 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
               router.invalidate();
               reset();
             }}
-            className="btn-gold rounded-full px-5 py-2.5 text-sm font-medium"
+            className="btn-clay rounded-full px-5 py-2.5 text-sm font-medium"
           >
             Try again
           </button>
-          <a href="/" className="btn-outline-gold rounded-full px-5 py-2.5 text-sm font-medium">
+          <a href="/" className="btn-outline-clay rounded-full px-5 py-2.5 text-sm font-medium">
             Go home
           </a>
         </div>
@@ -89,7 +89,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Great+Vibes&family=Inter:wght@300;400;500;600;700&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=DM+Sans:opsz,wght@9..40,400..700&display=swap",
       },
     ],
     scripts: [

@@ -43,18 +43,18 @@ function Newsletter() {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="your@email.com"
-          className="flex-1 min-w-0 rounded-l-full bg-secondary px-4 py-2.5 text-sm outline-none focus:ring-1 focus:ring-gold"
+          className="flex-1 min-w-0 rounded-l-full bg-card border border-border text-foreground placeholder:text-muted-foreground px-4 py-2.5 text-sm outline-none focus:ring-1 focus:ring-clay"
         />
         <button
           type="submit"
           disabled={busy}
-          className="btn-gold rounded-r-full px-4 text-sm font-medium disabled:opacity-60"
+          className="btn-clay rounded-r-full px-4 text-sm font-medium disabled:opacity-60"
         >
           {busy ? "…" : "Join"}
         </button>
       </form>
       {status && (
-        <p role="status" className={`mt-2 text-xs ${status.ok ? "text-gold" : "text-red-400"}`}>
+        <p role="status" className={`mt-2 text-xs ${status.ok ? "text-clay" : "text-red-700"}`}>
           {status.text}
         </p>
       )}
@@ -64,7 +64,7 @@ function Newsletter() {
 
 export function Footer() {
   return (
-    <footer className="relative border-t border-border bg-charcoal">
+    <footer className="on-dark relative bg-bark">
       <div className="hairline" />
       <div className="mx-auto grid max-w-7xl gap-12 px-6 py-16 md:grid-cols-4 md:px-8">
         <div className="md:col-span-1">
@@ -72,10 +72,10 @@ export function Footer() {
             <img
               src={logo.url}
               alt="Savanna Grill"
-              className="h-14 w-14 rounded-full ring-1 ring-gold/40"
+              className="h-14 w-14 rounded-full ring-1 ring-clay/40"
             />
             <div>
-              <div className="font-display text-xl text-gold-gradient">Savanna Grill</div>
+              <div className="font-display text-xl text-clay">Savanna Grill</div>
               <div className="text-[10px] tracking-[0.3em] uppercase text-muted-foreground">
                 Est. 2024
               </div>
@@ -87,23 +87,23 @@ export function Footer() {
         </div>
 
         <div>
-          <h4 className="text-sm uppercase tracking-[0.25em] text-gold mb-4">Visit</h4>
+          <h4 className="text-sm uppercase tracking-[0.25em] text-clay mb-4">Visit</h4>
           <ul className="space-y-3 text-sm text-muted-foreground">
             <li className="flex gap-2">
-              <MapPin size={16} className="text-gold mt-0.5 shrink-0" /> Demo Street, City Centre,
+              <MapPin size={16} className="text-clay mt-0.5 shrink-0" /> Demo Street, City Centre,
               Bulawayo, Zimbabwe
             </li>
             <li className="flex gap-2">
-              <Phone size={16} className="text-gold mt-0.5 shrink-0" /> +263 00 000 0000
+              <Phone size={16} className="text-clay mt-0.5 shrink-0" /> +263 00 000 0000
             </li>
             <li className="flex gap-2">
-              <Mail size={16} className="text-gold mt-0.5 shrink-0" /> hello@savannagrill.example
+              <Mail size={16} className="text-clay mt-0.5 shrink-0" /> hello@savannagrill.example
             </li>
           </ul>
         </div>
 
         <div>
-          <h4 className="text-sm uppercase tracking-[0.25em] text-gold mb-4">Explore</h4>
+          <h4 className="text-sm uppercase tracking-[0.25em] text-clay mb-4">Explore</h4>
           <ul className="space-y-2 text-sm">
             {[
               ["/menu", "Menu"],
@@ -113,7 +113,7 @@ export function Footer() {
               ["/contact", "Contact"],
             ].map(([to, label]) => (
               <li key={to}>
-                <Link to={to} className="text-muted-foreground hover:text-gold transition-colors">
+                <Link to={to} className="text-muted-foreground hover:text-clay transition-colors">
                   {label}
                 </Link>
               </li>
@@ -122,7 +122,7 @@ export function Footer() {
         </div>
 
         <div>
-          <h4 className="text-sm uppercase tracking-[0.25em] text-gold mb-4">Newsletter</h4>
+          <h4 className="text-sm uppercase tracking-[0.25em] text-clay mb-4">Newsletter</h4>
           <p className="text-sm text-muted-foreground mb-3">
             Be first to know about chef specials and events.
           </p>
@@ -133,7 +133,7 @@ export function Footer() {
               aria-label="Instagram"
               target="_blank"
               rel="noreferrer"
-              className="h-10 w-10 grid place-items-center rounded-full border border-gold/40 text-gold hover:bg-gold hover:text-charcoal transition"
+              className="h-10 w-10 grid place-items-center rounded-full border border-clay/40 text-clay hover:bg-clay hover:text-primary-foreground transition"
             >
               <Instagram size={16} />
             </a>
@@ -142,7 +142,7 @@ export function Footer() {
               aria-label="Facebook"
               target="_blank"
               rel="noreferrer"
-              className="h-10 w-10 grid place-items-center rounded-full border border-gold/40 text-gold hover:bg-gold hover:text-charcoal transition"
+              className="h-10 w-10 grid place-items-center rounded-full border border-clay/40 text-clay hover:bg-clay hover:text-primary-foreground transition"
             >
               <Facebook size={16} />
             </a>
@@ -151,7 +151,7 @@ export function Footer() {
               aria-label="WhatsApp"
               target="_blank"
               rel="noreferrer"
-              className="h-10 w-10 grid place-items-center rounded-full border border-gold/40 text-gold hover:bg-gold hover:text-charcoal transition"
+              className="h-10 w-10 grid place-items-center rounded-full border border-clay/40 text-clay hover:bg-clay hover:text-primary-foreground transition"
             >
               <MessageCircle size={16} />
             </a>

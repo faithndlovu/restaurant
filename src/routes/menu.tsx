@@ -82,7 +82,7 @@ function MenuPage() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(menuJsonLd(items)) }}
         />
       )}
-      <section className="py-20 md:py-28 bg-charcoal border-b border-border">
+      <section className="py-20 md:py-28 bg-sand border-b border-border">
         <div className="mx-auto max-w-7xl px-6 md:px-8 text-center">
           <SectionHeading
             eyebrow="The Menu"
@@ -101,8 +101,8 @@ function MenuPage() {
                 onClick={() => setActive(c)}
                 className={`px-5 py-2 rounded-full text-sm tracking-wide transition border ${
                   active === c
-                    ? "bg-gold text-charcoal border-gold"
-                    : "border-border text-muted-foreground hover:text-gold hover:border-gold/60"
+                    ? "bg-clay text-primary-foreground border-clay"
+                    : "border-border text-muted-foreground hover:text-clay hover:border-clay/60"
                 }`}
               >
                 {c}
@@ -118,7 +118,7 @@ function MenuPage() {
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Search the menu…"
-              className="w-full bg-secondary rounded-full pl-10 pr-4 py-2.5 text-sm outline-none focus:ring-1 focus:ring-gold"
+              className="w-full bg-secondary rounded-full pl-10 pr-4 py-2.5 text-sm outline-none focus:ring-1 focus:ring-clay"
             />
           </div>
         </div>
@@ -129,7 +129,7 @@ function MenuPage() {
           {loading ? (
             <p className="text-center text-muted-foreground py-20">Loading menu…</p>
           ) : error ? (
-            <div className="mx-auto max-w-lg rounded-md border border-red-500/30 bg-red-500/10 p-4 text-center text-sm text-red-300">
+            <div className="mx-auto max-w-lg rounded-md border border-red-500/30 bg-red-500/10 p-4 text-center text-sm text-red-700">
               We couldn't load the menu right now. Please try again shortly.
             </div>
           ) : filtered.length === 0 ? (
@@ -139,7 +139,7 @@ function MenuPage() {
               {filtered.map((item) => (
                 <article
                   key={item.id}
-                  className="group rounded-xl overflow-hidden bg-card border border-border hover:border-gold/50 transition-all duration-500"
+                  className="group rounded-xl overflow-hidden bg-card border border-border hover:border-clay/50 transition-all duration-500"
                 >
                   {item.image_url && (
                     <div className="aspect-[4/3] overflow-hidden relative">
@@ -149,7 +149,7 @@ function MenuPage() {
                         className="h-full w-full object-cover group-hover:scale-110 transition-transform duration-700"
                       />
                       {item.tag && (
-                        <span className="absolute top-3 left-3 text-[10px] tracking-[0.2em] uppercase bg-gold text-charcoal px-2.5 py-1 rounded-full">
+                        <span className="absolute top-3 left-3 text-[10px] tracking-[0.2em] uppercase bg-clay text-primary-foreground px-2.5 py-1 rounded-full">
                           {item.tag}
                         </span>
                       )}
@@ -158,7 +158,7 @@ function MenuPage() {
                   <div className="p-6">
                     <div className="flex justify-between items-baseline gap-4">
                       <h3 className="font-display text-xl">{item.name}</h3>
-                      <span className="text-gold font-medium">
+                      <span className="text-clay font-medium">
                         ${Number(item.price).toFixed(2)}
                       </span>
                     </div>

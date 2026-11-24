@@ -88,7 +88,7 @@ function AdminDashboard() {
 
   if (error)
     return (
-      <div className="rounded-md border border-red-500/30 bg-red-500/10 text-red-300 text-sm p-3">
+      <div className="rounded-md border border-red-500/30 bg-red-500/10 text-red-700 text-sm p-3">
         {error}
       </div>
     );
@@ -125,7 +125,7 @@ function AdminDashboard() {
           <h2 className="font-display text-xl">Coming up this week</h2>
           <Link
             to="/admin/reservations"
-            className="text-sm text-gold hover:text-gold-bright inline-flex items-center gap-1"
+            className="text-sm text-clay hover:text-clay-deep inline-flex items-center gap-1"
           >
             All reservations <ArrowRight size={14} />
           </Link>
@@ -146,8 +146,8 @@ function AdminDashboard() {
                 <span
                   className={`text-[10px] uppercase tracking-wider px-2 py-1 rounded-full shrink-0 ${
                     r.status === "pending"
-                      ? "bg-amber-500/15 text-amber-300"
-                      : "bg-emerald-500/15 text-emerald-300"
+                      ? "bg-amber-500/15 text-amber-800"
+                      : "bg-emerald-500/15 text-emerald-800"
                   }`}
                 >
                   {r.status}
@@ -176,10 +176,10 @@ function StatCard({
 }) {
   return (
     <div
-      className={`rounded-xl border bg-card p-5 ${highlight ? "border-gold/60" : "border-border"}`}
+      className={`rounded-xl border bg-card p-5 ${highlight ? "border-clay/60" : "border-border"}`}
     >
       <div className="flex items-center gap-2 text-muted-foreground text-xs uppercase tracking-wider">
-        <span className="text-gold">{icon}</span>
+        <span className="text-clay">{icon}</span>
         {label}
       </div>
       <div className="mt-3 font-display text-4xl">{value}</div>

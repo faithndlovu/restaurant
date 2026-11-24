@@ -100,25 +100,25 @@ export async function sendEmail(to: string, subject: string, html: string): Prom
 
 function layout(heading: string, intro: string, d: ReservationDetails, footer: string) {
   const row = (label: string, value: string) =>
-    `<tr><td style="color:#9b8f7a;font-size:12px;text-transform:uppercase;letter-spacing:.18em">${label}</td><td style="text-align:right">${value}</td></tr>`;
-  return `<!doctype html><html><body style="margin:0;background:#0f0e0c;font-family:Inter,Arial,sans-serif;color:#e9e4d8;padding:32px">
-  <table width="100%" cellpadding="0" cellspacing="0" style="max-width:560px;margin:auto;background:#161412;border:1px solid #2a2622;border-radius:12px;overflow:hidden">
+    `<tr><td style="color:#6b604c;font-size:12px;text-transform:uppercase;letter-spacing:.18em">${label}</td><td style="text-align:right">${value}</td></tr>`;
+  return `<!doctype html><html><body style="margin:0;background:#ebe0cd;font-family:"DM Sans",Arial,sans-serif;color:#2e2a1f;padding:32px">
+  <table width="100%" cellpadding="0" cellspacing="0" style="max-width:560px;margin:auto;background:#fffaf2;border:1px solid #dccfb8;border-radius:12px;overflow:hidden">
     <tr><td style="padding:32px 32px 8px 32px;text-align:center">
-      <div style="font-family:Georgia,serif;font-size:28px;color:#d4af37;letter-spacing:.5px">Savanna Grill</div>
-      <div style="font-size:11px;letter-spacing:.3em;color:#9b8f7a;text-transform:uppercase;margin-top:4px">Bulawayo</div>
+      <div style="font-family:Georgia,serif;font-size:28px;color:#a8461f;letter-spacing:.5px">Savanna Grill</div>
+      <div style="font-size:11px;letter-spacing:.3em;color:#6b604c;text-transform:uppercase;margin-top:4px">Bulawayo</div>
     </td></tr>
     <tr><td style="padding:24px 32px">
-      <h1 style="font-family:Georgia,serif;font-size:22px;margin:0 0 12px;color:#fff">${heading}</h1>
-      <p style="line-height:1.6;color:#cfc7b5;margin:0 0 20px">${intro}</p>
-      <table cellpadding="6" style="width:100%;border-collapse:collapse;border-top:1px solid #2a2622;border-bottom:1px solid #2a2622;margin:12px 0">
+      <h1 style="font-family:Georgia,serif;font-size:22px;margin:0 0 12px;color:#2e2a1f">${heading}</h1>
+      <p style="line-height:1.6;color:#4a4234;margin:0 0 20px">${intro}</p>
+      <table cellpadding="6" style="width:100%;border-collapse:collapse;border-top:1px solid #dccfb8;border-bottom:1px solid #dccfb8;margin:12px 0">
         ${row("Date", formatDate(d.reservation_date))}
         ${row("Time", escapeHtml(d.reservation_time))}
         ${row("Guests", escapeHtml(d.party_size))}
       </table>
-      ${d.requests ? `<p style="color:#cfc7b5;font-size:14px;margin:16px 0 0"><strong style="color:#d4af37">Notes:</strong> ${escapeHtml(d.requests)}</p>` : ""}
-      <p style="line-height:1.6;color:#cfc7b5;margin:24px 0 0">If anything changes, simply reply to this email or call us.</p>
+      ${d.requests ? `<p style="color:#4a4234;font-size:14px;margin:16px 0 0"><strong style="color:#a8461f">Notes:</strong> ${escapeHtml(d.requests)}</p>` : ""}
+      <p style="line-height:1.6;color:#4a4234;margin:24px 0 0">If anything changes, simply reply to this email or call us.</p>
     </td></tr>
-    <tr><td style="padding:20px 32px;border-top:1px solid #2a2622;text-align:center;color:#6b6253;font-size:12px">
+    <tr><td style="padding:20px 32px;border-top:1px solid #dccfb8;text-align:center;color:#6b604c;font-size:12px">
       ${footer}
     </td></tr>
   </table></body></html>`;
@@ -157,7 +157,7 @@ export function contactNotificationEmail(d: {
   subject: string;
   message: string;
 }) {
-  return `<!doctype html><html><body style="font-family:Inter,Arial,sans-serif;padding:24px">
+  return `<!doctype html><html><body style="font-family:"DM Sans",Arial,sans-serif;padding:24px">
   <h2 style="margin:0 0 12px">Message from the website</h2>
   <table cellpadding="6" style="border-collapse:collapse">
     <tr><td><b>Name</b></td><td>${escapeHtml(d.name)}</td></tr>
@@ -170,7 +170,7 @@ export function contactNotificationEmail(d: {
 }
 
 export function staffNotificationEmail(d: ReservationDetails) {
-  return `<!doctype html><html><body style="font-family:Inter,Arial,sans-serif;padding:24px">
+  return `<!doctype html><html><body style="font-family:"DM Sans",Arial,sans-serif;padding:24px">
   <h2 style="margin:0 0 12px">New reservation</h2>
   <table cellpadding="6" style="border-collapse:collapse">
     <tr><td><b>Name</b></td><td>${escapeHtml(d.name)}</td></tr>

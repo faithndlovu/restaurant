@@ -97,7 +97,7 @@ function Reservations() {
 
   return (
     <SiteLayout>
-      <section className="py-20 md:py-28 bg-charcoal border-b border-border">
+      <section className="py-20 md:py-28 bg-sand border-b border-border">
         <div className="mx-auto max-w-4xl px-6 text-center">
           <SectionHeading
             eyebrow="Reservations"
@@ -111,20 +111,20 @@ function Reservations() {
         <div className="mx-auto max-w-6xl px-6 md:px-8 grid lg:grid-cols-5 gap-10">
           <div className="lg:col-span-2 relative rounded-xl overflow-hidden min-h-[300px]">
             <img src={img4.url} alt="" className="absolute inset-0 h-full w-full object-cover" />
-            <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/60 to-transparent" />
-            <div className="relative p-8 h-full flex flex-col justify-end">
+            <div className="absolute inset-0 bg-gradient-to-t from-bark via-bark/60 to-transparent" />
+            <div className="on-dark relative p-8 h-full flex flex-col justify-end">
               <h3 className="font-display text-2xl">A Few Things</h3>
               <ul className="mt-4 space-y-2 text-sm text-foreground/85">
                 <li className="flex gap-2">
-                  <Calendar className="text-gold shrink-0" size={16} /> Open daily 8:00 AM — 10:00
+                  <Calendar className="text-clay shrink-0" size={16} /> Open daily 8:00 AM — 10:00
                   PM
                 </li>
                 <li className="flex gap-2">
-                  <Clock className="text-gold shrink-0" size={16} /> We confirm every booking by
+                  <Clock className="text-clay shrink-0" size={16} /> We confirm every booking by
                   email
                 </li>
                 <li className="flex gap-2">
-                  <Users className="text-gold shrink-0" size={16} /> Groups of 10+ — please call us
+                  <Users className="text-clay shrink-0" size={16} /> Groups of 10+ — please call us
                 </li>
               </ul>
             </div>
@@ -133,21 +133,21 @@ function Reservations() {
           <div className="lg:col-span-3 rounded-xl border border-border bg-card p-8 md:p-10">
             {submitted ? (
               <div className="text-center py-12 animate-fade-up">
-                <div className="mx-auto h-16 w-16 rounded-full bg-gold/15 grid place-items-center mb-5">
-                  <Check className="text-gold" size={32} />
+                <div className="mx-auto h-16 w-16 rounded-full bg-clay/15 grid place-items-center mb-5">
+                  <Check className="text-clay" size={32} />
                 </div>
                 <h3 className="font-display text-3xl">Reservation Received</h3>
                 <p className="mt-3 text-muted-foreground">
                   {emailed ? (
                     <>
                       Thank you! We've sent a confirmation to{" "}
-                      <strong className="text-gold">{form.email}</strong>. Your request is with our
+                      <strong className="text-clay">{form.email}</strong>. Your request is with our
                       team for review and we'll be in touch shortly to finalise your table.
                     </>
                   ) : (
                     <>
                       Thank you! Your request has been sent to our team for review — we'll contact
-                      you at <strong className="text-gold">{form.email}</strong> shortly to finalise
+                      you at <strong className="text-clay">{form.email}</strong> shortly to finalise
                       your table.
                     </>
                   )}
@@ -165,7 +165,7 @@ function Reservations() {
                       requests: "",
                     });
                   }}
-                  className="mt-8 btn-outline-gold rounded-full px-6 py-2.5 text-sm"
+                  className="mt-8 btn-outline-clay rounded-full px-6 py-2.5 text-sm"
                 >
                   Make Another Booking
                 </button>
@@ -254,7 +254,7 @@ function Reservations() {
                   />
                 </Field>
                 {error && (
-                  <div className="md:col-span-2 text-sm text-red-400 border border-red-500/30 bg-red-500/10 rounded-md p-3">
+                  <div className="md:col-span-2 text-sm text-red-700 border border-red-500/30 bg-red-500/10 rounded-md p-3">
                     {error}
                   </div>
                 )}
@@ -262,7 +262,7 @@ function Reservations() {
                   <button
                     type="submit"
                     disabled={busy}
-                    className="btn-gold w-full rounded-full py-3.5 text-sm font-semibold tracking-wide disabled:opacity-60"
+                    className="btn-clay w-full rounded-full py-3.5 text-sm font-semibold tracking-wide disabled:opacity-60"
                   >
                     {busy ? "Sending…" : "Confirm Reservation"}
                   </button>
@@ -277,7 +277,7 @@ function Reservations() {
 }
 
 const input =
-  "w-full bg-secondary rounded-md px-4 py-3 text-sm outline-none focus:ring-1 focus:ring-gold border border-transparent focus:border-gold/50 transition";
+  "w-full bg-secondary rounded-md px-4 py-3 text-sm outline-none focus:ring-1 focus:ring-clay border border-transparent focus:border-clay/50 transition";
 
 function Field({
   label,

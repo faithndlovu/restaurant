@@ -27,9 +27,9 @@ export function SectionHeading({
     <div className={`max-w-2xl ${align === "center" ? "mx-auto text-center" : ""}`}>
       {eyebrow && (
         <div className="flex items-center gap-3 mb-4 justify-center">
-          <span className="h-px w-8 bg-gold" />
-          <span className="text-xs tracking-[0.35em] uppercase text-gold">{eyebrow}</span>
-          <span className="h-px w-8 bg-gold" />
+          <span className="h-px w-8 bg-clay" />
+          <span className="text-xs tracking-[0.35em] uppercase text-clay">{eyebrow}</span>
+          <span className="h-px w-8 bg-clay" />
         </div>
       )}
       <h2 className="font-display text-4xl md:text-5xl text-foreground">{title}</h2>

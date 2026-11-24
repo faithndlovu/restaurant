@@ -136,8 +136,8 @@ function AdminReservations() {
               onClick={() => setFilter(f)}
               className={`px-4 py-1.5 rounded-full text-xs uppercase tracking-wider border transition ${
                 filter === f
-                  ? "bg-gold text-charcoal border-gold"
-                  : "border-border text-muted-foreground hover:text-gold"
+                  ? "bg-clay text-primary-foreground border-clay"
+                  : "border-border text-muted-foreground hover:text-clay"
               }`}
             >
               {f}
@@ -147,7 +147,7 @@ function AdminReservations() {
       </div>
 
       {error && (
-        <div className="rounded-md border border-red-500/30 bg-red-500/10 text-red-300 text-sm p-3">
+        <div className="rounded-md border border-red-500/30 bg-red-500/10 text-red-700 text-sm p-3">
           {error}
         </div>
       )}
@@ -165,27 +165,27 @@ function AdminReservations() {
               </div>
               <div className="text-sm text-muted-foreground grid sm:grid-cols-2 gap-x-6 gap-y-1">
                 <span className="inline-flex items-center gap-2">
-                  <Calendar size={14} className="text-gold" /> {r.reservation_date} ·{" "}
+                  <Calendar size={14} className="text-clay" /> {r.reservation_date} ·{" "}
                   {r.reservation_time}
                 </span>
                 <span className="inline-flex items-center gap-2">
-                  <Users size={14} className="text-gold" /> {r.party_size} guests
+                  <Users size={14} className="text-clay" /> {r.party_size} guests
                 </span>
                 <a
                   href={`mailto:${r.email}`}
-                  className="inline-flex items-center gap-2 hover:text-gold"
+                  className="inline-flex items-center gap-2 hover:text-clay"
                 >
-                  <Mail size={14} className="text-gold" /> {r.email}
+                  <Mail size={14} className="text-clay" /> {r.email}
                 </a>
                 <a
                   href={`tel:${r.phone}`}
-                  className="inline-flex items-center gap-2 hover:text-gold"
+                  className="inline-flex items-center gap-2 hover:text-clay"
                 >
-                  <Phone size={14} className="text-gold" /> {r.phone}
+                  <Phone size={14} className="text-clay" /> {r.phone}
                 </a>
               </div>
               {r.requests && (
-                <p className="text-sm text-foreground/80 border-l-2 border-gold/50 pl-3 mt-2">
+                <p className="text-sm text-foreground/80 border-l-2 border-clay/50 pl-3 mt-2">
                   {r.requests}
                 </p>
               )}
@@ -198,7 +198,7 @@ function AdminReservations() {
                     <button
                       onClick={() => setStatus(r, "confirmed")}
                       disabled={busyId === r.id}
-                      className="disabled:opacity-50 btn-gold rounded-full px-4 py-2 text-xs inline-flex items-center gap-1"
+                      className="disabled:opacity-50 btn-clay rounded-full px-4 py-2 text-xs inline-flex items-center gap-1"
                     >
                       <Check size={14} /> Confirm
                     </button>
@@ -206,7 +206,7 @@ function AdminReservations() {
                   <button
                     onClick={() => setStatus(r, "cancelled")}
                     disabled={busyId === r.id}
-                    className="disabled:opacity-50 rounded-full border border-border px-4 py-2 text-xs inline-flex items-center gap-1 hover:border-red-400/60 hover:text-red-300"
+                    className="disabled:opacity-50 rounded-full border border-border px-4 py-2 text-xs inline-flex items-center gap-1 hover:border-red-600/60 hover:text-red-700"
                   >
                     <X size={14} /> Cancel
                   </button>
@@ -223,7 +223,7 @@ function AdminReservations() {
               )}
               <button
                 onClick={() => remove(r.id)}
-                className="rounded-full border border-border px-3 py-2 text-xs hover:text-red-400"
+                className="rounded-full border border-border px-3 py-2 text-xs hover:text-red-700"
                 aria-label="Delete"
               >
                 <Trash2 size={14} />
@@ -243,9 +243,9 @@ function AdminReservations() {
 
 function StatusBadge({ status }: { status: Reservation["status"] }) {
   const style: Record<Reservation["status"], string> = {
-    pending: "bg-amber-500/15 text-amber-300",
-    confirmed: "bg-emerald-500/15 text-emerald-300",
-    cancelled: "bg-red-500/15 text-red-300",
+    pending: "bg-amber-500/15 text-amber-800",
+    confirmed: "bg-emerald-500/15 text-emerald-800",
+    cancelled: "bg-red-500/15 text-red-700",
     completed: "bg-muted text-muted-foreground",
   };
   return (
