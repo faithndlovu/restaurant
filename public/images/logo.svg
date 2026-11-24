@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Savanna Grill logo">
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f5d77a"/>
+      <stop offset="0.5" stop-color="#d4af37"/>
+      <stop offset="1" stop-color="#a8801f"/>
+    </linearGradient>
+    <radialGradient id="bg" cx="0.5" cy="0.4" r="0.7">
+      <stop offset="0" stop-color="#1f1a12"/>
+      <stop offset="1" stop-color="#0b0906"/>
+    </radialGradient>
+  </defs>
+  <circle cx="100" cy="100" r="98" fill="url(#bg)"/>
+  <circle cx="100" cy="100" r="90" fill="none" stroke="url(#gold)" stroke-width="3"/>
+  <circle cx="100" cy="100" r="84" fill="none" stroke="url(#gold)" stroke-width="1" opacity="0.5"/>
+  <!-- setting sun -->
+  <circle cx="100" cy="92" r="30" fill="url(#gold)" opacity="0.18"/>
+  <!-- acacia tree -->
+  <path d="M58 70c10-9 30-12 42-10 12-2 32 1 42 10-8 4-22 6-42 6s-34-2-42-6z" fill="url(#gold)"/>
+  <path d="M98 75l-2 40h8l-2-40z" fill="url(#gold)"/>
+  <path d="M100 86l-14-10M100 82l15-8" stroke="url(#gold)" stroke-width="3" stroke-linecap="round"/>
+  <!-- horizon / grill bars -->
+  <path d="M52 118h96" stroke="url(#gold)" stroke-width="3" stroke-linecap="round"/>
+  <path d="M62 126h76M72 134h56" stroke="url(#gold)" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+  <!-- flame -->
+  <path d="M100 150c-8-5-10-12-6-19 1 5 4 7 6 7-1-6 2-12 8-15-2 6 2 10 2 15 0 6-4 10-10 12z" fill="url(#gold)"/>
+  <text x="100" y="176" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="13" letter-spacing="3" fill="url(#gold)">SAVANNA GRILL</text>
+</svg>

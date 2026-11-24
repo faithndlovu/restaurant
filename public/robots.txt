@@ -1,0 +1,10 @@
+# Savanna Grill is a fictional restaurant: this site is a portfolio demo.
+# The name, contact details and address are placeholders, so it is kept out of
+# search results to avoid anyone mistaking it for a real business.
+#
+# To allow indexing: replace the two lines below with
+#   User-agent: *
+#   Allow: /
+# and remove the noindex meta tag in src/routes/__root.tsx.
+User-agent: *
+Disallow: /
